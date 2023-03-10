@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Todo.css'
 
 function Todo(){
+
+    const [text, setText] = useState("")
+
+    function handleChange(event){
+        let t = event.target.value
+        setText(t)
+    }
+
     return (
         <div className='container'>
         <h1>Teste</h1>
         <form>
-            <input type='text'></input>
+            <input onChange={handleChange} type='text'></input>
             <button>Add</button>
         </form>
 
         <ul>
-            <li>Item</li>
+            <li>{text}</li>
         </ul>
 
         </div>
