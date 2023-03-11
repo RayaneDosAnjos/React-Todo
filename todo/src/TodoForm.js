@@ -3,8 +3,6 @@ import React, {useState} from "react";
 
 function TodoForm(props){
     const [text, setText] = useState("")
-    
-
 
     function handleChange(event){
         
@@ -20,7 +18,6 @@ function TodoForm(props){
             setText("")
         }
     }
-
 
     return(
         <form>
